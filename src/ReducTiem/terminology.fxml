@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="694.0" style="-fx-background-color: steelblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReducTiem.sceneController">
+   <children>
+      <Text fill="WHITE" layoutX="287.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About" textAlignment="CENTER" wrappingWidth="119.13671875">
+         <font>
+            <Font name="Berlin Sans FB" size="43.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="130.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Terminology &amp; Payoff Value Formulas" textAlignment="CENTER" wrappingWidth="434.3984375">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextArea editable="false" layoutX="59.0" layoutY="110.0" prefHeight="346.0" prefWidth="576.0" style="-fx-border-style: none;" text="Optimistic time (OT) - least time taken for task completion&#10;Most likely time (MT) - amount of time taken to complete a &#10;                                            task w/o problems&#10;Pessimistic time (PT) - most time taken for task completion&#10;&#10;Expected time (ET) - estimated time taken to complete a task w/ problems&#10;ES - earliest time to start&#10;EF - earliest time to finish&#10;LS - latest time to start&#10;LF - latest time to finish&#10;&#10;Slack - amount of time a task can be delayed without resulting &#10;                       in an overall delay to other tasks or the project&#10;Critical Path - longest possible continuous path from a task's start to finish&#10;Critical Path Activity - refers to an activity without slack&#10;&#10;FORMULAS:&#10;a. ET = (OT + 4(MT) + PT) / 6&#10;b. ES = HIGHEST predecessor value&#10;c. EF = ES + ET&#10;d. LS = LF - ET&#10;e. LF = LOWEST predecessor value (LF = EF in the last row)&#10;f. SL = ES - EF or LS - LF (must be 0 to determine the Critical Path&#10;&#10;&#10;&#10;&#10;&#10;">
+         <font>
+            <Font name="System Bold" size="14.5" />
+         </font>
+      </TextArea>
+      <Button fx:id="backBtn" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#toAboutScene" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: skyblue;" text="Back" textAlignment="CENTER" textFill="#002990">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

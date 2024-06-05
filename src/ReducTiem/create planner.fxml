@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="1040.0" style="-fx-background-color: steelblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReducTiem.planMaker">
+   <children>
+      <Text fill="WHITE" layoutX="327.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Planner" textAlignment="CENTER" wrappingWidth="386.13671875">
+         <font>
+            <Font name="Berlin Sans FB" size="43.0" />
+         </font>
+      </Text>
+      <TextField fx:id="taskName" layoutX="63.0" layoutY="103.0" />
+      <TableView fx:id="taskList" layoutX="260.0" layoutY="130.0" prefHeight="250.0" prefWidth="730.0">
+        <columns>
+          <TableColumn fx:id="codeCol" prefWidth="41.0" text="Code" />
+          <TableColumn fx:id="taskCol" prefWidth="208.0" text="Task Name" />
+            <TableColumn fx:id="predCol" prefWidth="107.0" text="Predecessor(s)" />
+            <TableColumn fx:id="otCol" minWidth="0.0" prefWidth="42.0" text="OT" />
+            <TableColumn fx:id="mtCol" prefWidth="40.0" text="MT" />
+            <TableColumn fx:id="ptCol" prefWidth="43.0" text="PT" />
+            <TableColumn fx:id="etCol" prefWidth="40.0" text="ET" />
+            <TableColumn fx:id="esCol" prefWidth="41.0" text="ES" />
+            <TableColumn fx:id="efCol" prefWidth="42.0" text="EF" />
+            <TableColumn fx:id="lsCol" prefWidth="43.0" text="LS" />
+            <TableColumn fx:id="lfCol" prefWidth="41.0" text="LF" />
+            <TableColumn fx:id="slCol" prefWidth="41.0" text="SL" />
+        </columns>
+      </TableView>
+      <TextField fx:id="optTime" layoutX="165.0" layoutY="260.0" prefHeight="25.0" prefWidth="43.0" />
+      <Text fill="#002990" layoutX="97.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Name" wrappingWidth="79.9999989271164">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#002990" layoutX="51.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Optimistic Time">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#002990" layoutX="53.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Most Probable Time" textAlignment="CENTER" wrappingWidth="104.7968755364418">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#002990" layoutX="51.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pessimistic Time">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="probTime" layoutX="165.0" layoutY="301.0" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="pesTime" layoutX="165.0" layoutY="343.0" prefHeight="25.0" prefWidth="43.0" />
+      <Text fill="WHITE" layoutX="499.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Table" textAlignment="CENTER" wrappingWidth="210.3984375">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Button fx:id="backBtn" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#toMain" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: skyblue;" text="Back" textAlignment="CENTER" textFill="#002990">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="addPredBtn" layoutX="46.0" layoutY="211.0" mnemonicParsing="false" onAction="#addPredecessors" prefHeight="28.0" prefWidth="103.0" style="-fx-background-color: skyblue;" text="Add Predecessor" textAlignment="CENTER" textFill="#002990">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveXlsx" layoutX="552.0" layoutY="399.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="103.0" style="-fx-background-color: skyblue;" text="Save as .xlsx" textAlignment="CENTER" textFill="#002990">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="addInputs" layoutX="86.0" layoutY="399.0" mnemonicParsing="false" onAction="#addToTable" prefHeight="34.0" prefWidth="103.0" style="-fx-background-color: skyblue;" text="Add Inputs" textAlignment="CENTER" textFill="#002990">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="predList" layoutX="63.0" layoutY="178.0" />
+      <Text fill="#002990" layoutX="86.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Predecessor(s)" textAlignment="CENTER" wrappingWidth="102.99999651312828">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="clearPredList" layoutX="155.0" layoutY="211.0" mnemonicParsing="false" onAction="#clearPredList" prefHeight="28.0" prefWidth="73.0" style="-fx-background-color: skyblue;" text="Clear List" textAlignment="CENTER" textFill="#002990">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Button>
+      <Text fx:id="resultsTxt" fill="#fffb00" layoutX="418.0" layoutY="501.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Results are shown here" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <Button layoutX="766.0" layoutY="483.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" style="-fx-background-color: skyblue;" text="Save results as .txt" textAlignment="CENTER" textFill="#002990">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Button>
+      <Line endX="257.0" layoutX="480.0" layoutY="511.0" startX="-100.0" />
+   </children>
+</Pane>

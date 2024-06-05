@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="803.0" style="-fx-background-color: steelblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="WHITE" layoutX="209.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shorten Schedule" textAlignment="CENTER" wrappingWidth="386.13671875">
+         <font>
+            <Font name="Berlin Sans FB" size="43.0" />
+         </font>
+      </Text>
+      <TableView layoutX="46.0" layoutY="107.0" prefHeight="260.0" prefWidth="712.0">
+         <columns>
+            <TableColumn prefWidth="41.0" text="Code" />
+            <TableColumn prefWidth="208.0" text="Task Name" />
+            <TableColumn prefWidth="119.0" text="Predecessor(s)" />
+            <TableColumn minWidth="0.0" prefWidth="38.0" text="OT" />
+            <TableColumn prefWidth="38.0" text="AT" />
+            <TableColumn prefWidth="35.0" text="PT" />
+            <TableColumn prefWidth="33.0" text="ET" />
+            <TableColumn prefWidth="38.0" text="ES" />
+            <TableColumn prefWidth="38.0" text="EF" />
+            <TableColumn prefWidth="41.0" text="LS" />
+            <TableColumn prefWidth="38.0" text="LF" />
+            <TableColumn prefWidth="44.0" text="SL" />
+         </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="297.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Planner Table" textAlignment="CENTER" wrappingWidth="210.3984375">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Button layoutX="24.0" layoutY="24.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: skyblue;" text="Back" textAlignment="CENTER" textFill="#002990">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="357.0" layoutY="378.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: skyblue;" text="Open .xlsx file" textAlignment="CENTER" textFill="#002990">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Button>
+      <Text fill="#fffb00" layoutX="261.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Results are shown here" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <Button layoutX="345.0" layoutY="468.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" style="-fx-background-color: skyblue;" text="Save results as .txt" textAlignment="CENTER" textFill="#002990">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Button>
+      <Line endX="257.0" layoutX="323.0" layoutY="455.0" startX="-100.0" />
+   </children>
+</Pane>
